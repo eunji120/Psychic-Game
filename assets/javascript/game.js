@@ -56,7 +56,7 @@ document.onkeyup = function(event) {
        
         losses++;
        
-        guessesLEft = 9;
+        guessesLeft = 9;
     
         guessesSoFar = [];
        
