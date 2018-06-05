@@ -19,6 +19,8 @@ var userGuess = null;
 
 var computerAnswer = alphabet[Math.floor(Math.random() * alphabet.length)]; 
 
+console.log("Wins: " + wins + "Losses: " + losses + "Guesses Left: " + guessesLeft + "Your Guesses so far: " + guessesSoFar);
+
 //Generate the User's guess
 
 document.onkeyup = function(event) {
