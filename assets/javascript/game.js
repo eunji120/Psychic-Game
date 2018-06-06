@@ -39,6 +39,8 @@ document.onkeyup = function(event) {
    //reset guessesLeft, guessesSoFar, computerAnswer
    if (computerAnswer == userGuess) {
        
+    alert("You won!");    
+
         wins++;
        
         guessesLeft = 9;
@@ -54,6 +56,8 @@ document.onkeyup = function(event) {
    //reset guesses Left, guesseSoFar, computer Answer
    if (guessesLeft == 0) {
        
+        alert("You lost!");
+    
         losses++;
        
         guessesLeft = 9;
