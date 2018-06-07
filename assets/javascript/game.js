@@ -1,19 +1,6 @@
-//pseudo code
 
 alert("You have 9 guesses per round. Guess a random letter.");
 
-//Variables: Alphabet, Wins, Losses, Guesses Left, Guesses So Far, User Guess, Computer Answer
-var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-var wins = 0;
-
-var losses = 0;
-
-var guessesLeft = 9; 
-
-var guessesSoFar = [];
-
-var userGuess = null;
 
 //Generate Computer's Answer randomly
 
@@ -26,6 +13,8 @@ console.log("Wins: " + wins + " Losses: " + losses + " Guesses Left: " + guesses
 document.onkeyup = function(event) {
 
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+    for (i = 0; i < alphabet.length; i++) {
 
     if (guesesSoFar.indexOf(userGuess) < 0 && alphabet.indexOf(userGuess) >= 0) {
         
@@ -46,6 +35,8 @@ document.onkeyup = function(event) {
         guessesLeft = 9;
        
         guessesSoFar = [];
+
+        display();
        
         computerAnswer = alphabet[Math.floor(Math.random() * alphabet.length)];
        
@@ -63,11 +54,15 @@ document.onkeyup = function(event) {
         guessesLeft = 9;
     
         guessesSoFar = [];
+
+        display();
        
         computerAnswer = alphabet[Math.floor(Math.random() * alphabet.length)];
        
         console.log("Wins: " + wins + " Losses: " + losses + " Guesses Left: " + guessesLeft + " Your Guesses so far: " + guessesSoFar + " The Answer is " + computerAnswer);
    }
+
+    }
 };
 
 
@@ -76,11 +71,12 @@ document.onkeyup = function(event) {
 // }
 
 // for (i = 0; i < alphabet.length; i++) {
-//     guess = prompt("What's your guess?");
-//     if (answer == guess) {
+//     
+//     if (computerAnswer == userGuess) {
 //         alert("You won!");
 //         break;
 //     }else{
 //         guess = prompt("Try again.");
 //     }
 // }
+
